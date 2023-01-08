@@ -1,0 +1,239 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins';
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+:root {
+    --main_clr: #d76c20;
+    --second_clr: #e88945;
+    --third_clr: #ffe1a1;
+    --white: #fff;
+    --black: #000;
+}
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+ul {
+    list-style: none;
+}
+.container {
+    width: 85%;
+    margin: auto;
+}
+/* header {
+    background: #ffe1a1;
+} */
+.head-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+.head-cont .logo {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 15px 0;
+    position: relative;
+    margin-left: 2.5%;
+}
+.circle-bf {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background: var(--third_clr);
+    top: 50%;
+    left: -9.5%;
+    transform: translatey(-50%);
+    z-index: -5;
+    border-radius: 50%;
+}
+.circle-af {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background: var(--third_clr);
+    top: 50%;
+    left: 72.5%;
+    transform: translatey(-50%);
+    z-index: -5;
+    border-radius: 50%;
+}
+span {
+    color: var(--main_clr);
+
+}
+.head-cont nav ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.head-cont nav li {
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.head-cont nav li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 0;
+    height: 2.5px;
+    background: var(--main_clr);
+    z-index: 12;
+    transition: .5s;
+}
+.head-cont nav li:hover::before {
+    width: 90%;
+}
+.head-cont nav li:last-child::before {
+    width: 0;
+}
+.menu {
+    display: none;
+    padding: 3px;
+    background: var(--main_clr);
+    border-radius: 5px;
+}
+.banner {
+    width: 100%;
+    background: var(--third_clr);
+}
+.banner-cont {
+    position: relative;
+    height: calc(100vh - 84.4px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.banner-cont .left {
+    width: 49%;
+    /* transform: translateY(-10%); */
+}
+.banner-cont .left h1 {
+    font-size: 3rem;
+}
+.banner-cont .left p {
+    font-weight: 600;
+    padding: 15px 0 30px 0;
+}
+.banner-cont .right {
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.banner .right img {
+    width: 100%;
+}
+.hero-btn {
+    background: var(--main_clr);
+    color: var(--white);
+    padding: 10px 15px;
+    border-radius: 35px;
+    font-size: 1.1rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: .5s;
+}
+.hero-btn:hover {
+    background: var(--second_clr);
+} 
+@media(max-width: 980px) {
+    .banner-cont .left h1 {
+        font-size: 2.5rem;
+    }
+}
+@media(max-width: 880px) {
+    .container {
+        width: 90%;
+    }
+    .banner-cont .left h1 {
+        font-size: 2rem;
+    }
+    .banner-cont .left p {
+        font-size: .9rem;
+    }
+    .left button {
+        padding: 7px 10px;
+        font-size: .9rem;
+    }
+}
+@media(max-width: 680px) {
+    .banner-cont {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 50px;
+        padding: 50px 0;
+        text-align: center;
+        height: fit-content;
+    }
+    .banner-cont .left {
+        width: 70%;
+    }
+    .banner-cont .right {
+        width: 70%;
+    }
+    header nav {
+        /* display: none; */
+        position: absolute;
+        right: -300px;
+        top: 84.4px;
+        z-index: 5;
+        background: var(--white);
+        transition: .5s;
+    }
+    header nav.active {
+        right: 0;
+    }
+    .head-cont nav ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0;
+        height: 100vh;
+        width: 100%;
+    }
+    .head-cont nav li {
+        background: var(--white);
+        width: 300px;
+        text-align: center;
+        padding: 20px 15px;
+    }
+    .head-cont nav li:hover {
+        background: var(--third_clr);
+    }
+    .head-cont nav li:last-of-type:hover {
+        background: var(--white);
+    }
+    .head-cont nav li::before {
+        left: 0;
+        height: 2px;
+    }
+    .head-cont nav li:hover::before {
+        width: 0;
+        left: 0;
+        z-index: 5;
+    }
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+}
+@media(max-width: 450px) {
+    .banner-cont .left h1 {
+        font-size: 1.5rem;
+    }
+    .banner-cont .left p {
+        font-size: .8rem;
+    }
+}

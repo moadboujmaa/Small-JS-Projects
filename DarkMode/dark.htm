@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing:  border-box;
+            font-family: 'source sans pro', sans-serif;
+        }
+        body {
+            height: 100vh;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            padding: 20px;
+            text-align: center;
+            font-size: 40px;
+        }
+        .paragraph {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 20px;
+            text-align: justify;
+        }
+        .toggle-btn {
+            position: fixed;
+            top: 40px;
+            right: 40px;
+            color: #f5f5f5;
+            background-color: #000;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .toggle-btn i {
+            padding-left: 10px;
+        }
+        body.change-background {
+            color: #fff;
+            background: #000;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+    <script src="https://kit.fontawesome.com/ac281cdc2c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Light Mode/Dark Mode</h1>
+        <p class="paragraph">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam molestiae quisquam soluta cumque. Tempore accusantium, sed nihil quod est quia cumque illum eligendi blanditiis similique sunt? Aliquam dicta reprehenderit placeat. Tempore, repudiandae asperiores cumque doloremque id dolorum rerum adipisci veniam consectetur quos consequatur! Debitis saepe porro, corrupti non ex recusandae, inventore esse quo reiciendis harum ea. Voluptatem accusantium molestiae quo harum nobis atque adipisci ipsum, odit neque iusto consectetur! Velit, similique saepe odio, reprehenderit molestias illo aliquid eveniet voluptate delectus facilis ipsa praesentium maxime neque est quam fugit. Hic ex velit similique tempore, eveniet non nostrum accusantium officiis obcaecati voluptates quidem libero quam! Consequuntur, architecto eveniet iste similique ipsum fugit molestiae, vitae exercitationem doloremque aut maiores, autem quidem aperiam iusto? Aliquid voluptas sapiente iusto vitae eius saepe ipsam est dolor? Quae natus necessitatibus possimus mollitia expedita quidem, sit nam voluptatem nihil tempore totam repudiandae veniam officia iure magnam! Iure hic excepturi laborum eaque officiis vel perspiciatis? Enim adipisci aut commodi perspiciatis quae. Iste nesciunt aperiam perspiciatis quibusdam. Deleniti nobis at atque minus voluptatem explicabo fuga tempore temporibus eius, aut ea possimus earum, quod et consequatur quia, aliquam amet alias eum! Recusandae nobis voluptate perferendis iusto? Vero ad earum porro quam.
+        </p>
+        <button class="toggle-btn" id="toggle-btn">
+            <span class="span">Dark Mode</span>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+    <script src="./dark.js"></script>
+</body>
+</html>

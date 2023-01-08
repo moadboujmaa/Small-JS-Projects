@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    color: #efefef;
+}
+body  {
+    height: 200vh;
+}
+.container {
+    width: 85%;
+    margin: auto;
+}
+header {
+    background: #111658;
+}
+button {
+    background: #111658;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    outline: none;
+}
+button:hover {
+    background: #ff4400;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    height: 70px;
+
+}
+li {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+li:hover {
+    background: #ff4400;
+}
+li img {
+    width: 35px;
+}
+.content {
+    height: calc(100vh - 70px);
+    background: url('./sky-1.jpg');
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
+.content .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content .cont-content {
+    text-align: center;
+}
+
+/* Spans */
+.spans {
+    padding: 10px;
+    background: #111658;
+    position: absolute;
+    bottom: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.spans span {
+    height: 15px;
+    width: 15px;
+    border-radius: 20px;
+    background: #ff4400;
+    cursor: pointer;
+}
+.spans span.selected {
+    background: #ccc;
+}
